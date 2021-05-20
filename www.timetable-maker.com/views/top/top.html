@@ -1,0 +1,101 @@
+<form name="myform" id="topCtrl" ng-controller="topCtrl">
+	<div class="container">
+		<div class="row row-margin-top">
+			<div class="col-12 headerButton">
+				<button type="button" id="csvCopy" class="btn btn-primary" ng-click="onClickCopy()">
+					<i class="fa fa-copy"></i>&nbsp;COPY</button>
+				<button type="button" id="csv Copy" class="btn btn-primary" ng-click="onClickPdf()">
+					<i class="fa fa-download"></i>&nbsp;PDF</button>
+				<button type="button" id="csvDownload" class="btn btn-primary" ng-click="onClickDownloadCsv()">
+					<i class="fa fa-download"></i>&nbsp;CSV</button>
+				<button type="button" id="csv Copy" class="btn btn-primary" ng-click="onClickPng()">
+					<i class="fa fa-image"></i>&nbsp;PNG画像</button>
+				<button type="button" class="btn btn-primary" ng-click="onClickDownloadPng()">
+					<i class="fa fa-table"></i>&nbsp;TABLE</button>
+			</div>
+		</div>
+		<div class="row row-margin-top">
+			<div class="col-12">
+				<div class="timeEventList">
+					<div class="timeStandardFont timeEventList">Start<br />Time</div>
+					<input type="tel" maxlength="2" class="form-control timeStandard" ng-model="timeStandardHour"
+						ng-change="onClickKijyunJikanChenge()" />
+					<span class="timeStandardDotFont">:</span>
+					<input type="tel" maxlength="2" class="form-control timeStandard" ng-model="timeStandardMin"
+						ng-change="onClickKijyunJikanChenge()" />
+				</div>
+			</div>
+		</div>
+		<div class="row row-margin-top">
+			<div class="col settei_box">
+				<ul id="timeL.ist" ui-sortable="sortableOptions" ng-model="timeEvents" class="list">
+					<li ng-repeat="timeEvent in timeEvents">
+						<div class="row">
+							<div class="timeEventList noDesign"> {{timeEvent.cardNo}} </div>
+							<div class="item col timeEventList">
+								<div class="timeEventList">
+									<i class="fa fa-arrows fa-2x timeIconDesign"></i>
+								</div>
+								<div class="timeEventList timeStEdDesign"> {{timeEvent.timeStart}}<br />
+									&nbsp;&nbsp;-&nbsp;{{timeEvent.timeEnd}} </div>
+								<div class="timeEventList timeMinDesign">
+									<input type="tel" maxlength="3" class="form-control min"
+										id="timeMin_{{timeEvent.cardNo}}" ng-model="timeEvent.timeMin"
+										ng-change="timeCalculation()"
+										ng-click="onClickInputArea('timeMin_' + timeEvent.cardNo)"></div>
+								<div class="timeEventList textDesign">
+									<input type="text" class="form-control" id="textContents_{{timeEvent.cardNo}}"
+										ng-model="timeEvent.text" ng-change="dataSave()"
+										ng-click="onClickInputArea('textContents_' + timeEvent.cardNo)">
+								</div>
+							</div>
+							<div class="timeEventList trashArea">
+								<button type="button" class="timeButton"
+									ng-click="onClickTimeAreaDelete(timeEvent.cardNo)">
+									<i class="fa fa-trash fa-2x"></i>
+								</button>
+							</div>
+							<div class="clearBoth"></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row row-margin-top">
+			<div class="col"><button type="button" id="csvDownload" class="btn btn-secondary"
+					ng-click="onClickUploadCsv()">
+					<i class="fa fa-upload"></i>&nbsp;CSV Upload </button>
+				<input type="file" id="upload_file" ng-model="upload_file" accept="text/csv" style="display: none"
+					ngf-select ngf-multiple="false" ngf-change="parseFile(upload_file)">
+			</div>
+			<div class="col center">
+				<button type="button" class="timeButton" ng-click="onClickTimeAreaAdd()">
+					<i class="fa fa-plus-circle fa-3x"></i>
+				</button>
+			</div>
+			<div class="col">
+			</div>
+		</div>
+		<div class="row row-margin-top setumeibun">
+			<div class="col">
+				<p>※スタート時間やコンテンツ（出演者）の時間（分）を入力すると即座に計算します。</p>
+				<p>※コンテンツ（出演者）をドラッグ＆ドロップで手軽に入れ替えることができます。</p>
+				<p>※完成したタイムテーブルはCSV形式、PDF形式、HTML形式で出力できます。</p>
+				<p>※自動保存機能になっています。入力情報は各ユーザーのWEBブラウザ内（クッキー）に記録します。</p>
+				<p>※皆さんの入力した情報はサーバーなどの外部には記録しません。</p>
+				<p>※下記アドセンス広告の収入はサーバー代と開発者の栄養補給に当てさせていただきます。</p>
+			</div>
+		</div>
+		<div class="row row-margin-top">
+			<div class="col">
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- timetablemaker2 -->
+				<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2098916677172681"
+					data-ad-slot="9514503184" data-ad-format="auto" data-full-width-responsive="true"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+	</div>
+</form>

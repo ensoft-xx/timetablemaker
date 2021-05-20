@@ -1,0 +1,18 @@
+<form name="myForm" id="imagePutCtrl" ng-controller="imagePutCtrl">
+	<table class="timeTableDesign">
+		<tr>
+			<th>No</th>
+			<th>Start</th>
+			<th>End</th>
+			<th>Min</th>
+			<th>Contents</th>
+		</tr>
+		<tr ng-repeat="timeEvent in timeEvents">
+			<td>{{timeEvent.cardNo}}</td>
+			<td>{{timeEvent.timeStart}}</td>
+			<td>{{timeEvent.timeEnd}}</td>
+			<td>{{timeEvent.timeMin}}</td>
+			<td class="left">{{timeEvent.text}}</td>
+		</tr>
+	</table>
+</form>

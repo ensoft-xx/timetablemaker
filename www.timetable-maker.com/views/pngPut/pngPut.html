@@ -1,0 +1,25 @@
+<form name="myform" id="pngPutCtrl" ng-controller="pngPutCtrl">
+	<div class="row row-margin-top">
+		<div class="col">
+			<a id="getImage" href="" style="display: none; cursor: pointer;" download="image.png">png</a>
+		</div>
+	</div>
+	<div id="imageTarget" style="padding: 20px;" class="row row-margin-top">
+		<table class="timeTableDesign">
+			<tr>
+				<th>No</th>
+				<th>Start</th>
+				<th>End</th>
+				<th>Min</th>
+				<th>Contents</th>
+			</tr>
+			<tr ng-repeat="timeEvent in timeEvents">
+				<td>{{timeEvent.cardNo}}</td>
+				<td>{{timeEvent.timeStart}}</td>
+				<td>{{timeEvent.timeEnd}}</td>
+				<td>{{timeEvent.timeMin}}</td>
+				<td class="left">{{timeEvent.text}}</td>
+			</tr>
+		</table>
+	</div>
+</form>

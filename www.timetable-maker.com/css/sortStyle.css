@@ -1,0 +1,188 @@
+.list {
+	list-style: none outside none;
+	margin: 5px;
+}
+
+.item {
+	padding: 5px;
+	margin: 2px;
+	border: 2px solid #444;
+	border-radius: 5px;
+	background-color: #FFF;
+	cursor: move;
+}
+
+/**/
+
+.footerFont {
+	color: #FFF;
+}
+
+.footerFont a {
+	color: #FFF;
+}
+
+/* cardNo */
+
+.noDesign {
+	width: 20px;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 1.2em;
+}
+
+/* timeIconDesign */
+
+.timeIconDesign {
+	margin: 5px 20px 0px 20px;
+}
+
+/* timeStart timeEnd */
+
+.timeStEdDesign {
+	margin: 5px 10px 0px 10px;
+	line-height: 1.1em;
+}
+
+/* timeMin */
+
+.timeMinDesign {
+	margin: 0px 10px 0px 10px;
+	line-height: 1.0em;
+}
+
+.timeMinDesign .min {
+	width: 60px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+.timeMinDesign .minText {
+	font-size: 0.8em;
+}
+
+/* text */
+
+.textDesign {
+	width: 50%;
+	margin: 0px 10px 0px 10px;
+	line-height: 1.8em;
+	text-align: left;
+}
+
+/* trash */
+
+.trashArea {
+	margin: 10px 10px 0px 10px;
+	line-height: 1.8em;
+	text-align: left;
+}
+
+/* 回り込み */
+
+.timeEventList {
+	float: left;
+}
+
+/* ボタン色 */
+
+.btn-primary {
+	background-color: #17a2b8;
+	border-color: #17a2b8;
+}
+
+.btn-secondary {
+	background-color: #dddddd;
+	border-color: #dddddd;
+}
+
+.fa-arrows:before {
+	color: #aaaaaa;
+}
+
+.fa-trash:before {
+	color: #dddddd;
+}
+
+.fa-angle-up:before {
+	color: #17a2b8;
+}
+
+.fa-angle-down:before {
+	color: #17a268;
+}
+
+.fa-plus-circle:before {
+	color: #17a2b8;
+}
+
+/* ヘッダーボタン */
+
+.timeStandard {
+	width: 80px;
+	height: 44px;
+	font-size: 1.6em;
+	font-weight: bold;
+	float: left;
+}
+
+.timeStandardFont {
+	margin: 0px 10px 0px 0px;
+	font-size: 1.4em;
+	line-height: 1.0em;
+	font-weight: bold;
+	float: left;
+}
+
+.timeStandardDotFont {
+	width: 20px;
+	text-align: center;
+	font-size: 2.0em;
+	font-weight: bold;
+	float: left;
+}
+
+/*  */
+
+.headerButton {
+	text-align: right;
+}
+
+/* 出力用テーブルデザイン */
+
+.timeTableDesign {
+	width: 100%;
+	margin: 10px 0px 0px 0px;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.timeTableDesign th, .timeTableDesign td {
+	border: 2px #333 solid;
+	padding: 6px;
+	text-align: center;
+}
+
+.timeTableDesign th {
+	background-color: #999;
+}
+
+.timeTableDesign .left {
+	text-align: left;
+}
+
+.timeTableDesign tr:nth-child(odd) {
+	background-color: #eee;
+}
+
+/*  */
+
+.setumeibun {
+	margin-top: 50px;
+}
+
+.setumeibun P {
+	font-size: 0.8em;
+	color: #ccc;
+	line-height: 1.2em;
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="jp" ng-app="myApp">
+
+<head>
+	<meta charset="utf-8">
+	<title>Time Table Maker タイムテーブルメーカー</title>
+	<!-- css -->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/bootstrap-4.3.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/sortStyle.css">
+	<!--  -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!--  -->
+	<script src="libs/jquery/jquery-3.4.1.min.js"></script>
+	<script src="libs/jquery/jquery-ui.min.js"></script>
+	<script src="libs/jquery/jquery.ui.touch-punch.min.js"></script>
+	<!-- js -->
+	<script src="libs/angularjs/angular.js"></script>
+	<script src="libs/angularjs/angular-cookies.js"></script>
+	<script src="libs/angular-animate/angular-animate.js"></script>
+	<script src="libs/angular-ui-router/angular-ui-router.js"></script>
+	<!-- ui -->
+	<script src="libs/ui-bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+	<script src="libs/loading-bar/loading-bar.js"></script>
+	<script src="libs/ui-sortable-master/sortable.js"></script>
+	<link rel="stylesheet" href="libs/loading-bar/loading-bar.css" />
+	<script src="libs/ng-file-upload/ng-file-upload.min.js"></script>
+	<script src="libs/papaparse/papaparse.min.js"></script>
+	<script src="libs/pdfmake/pdfmake.min.js"></script>
+	<script src="libs/pdfmake/vfs_fonts.js" async></script>
+	<script src="libs/html2canvas/html2canvas.min.js"></script>
+	<!-- js -->
+	<script src="index.js"></script>
+	<script src="common.js"></script>
+	<script src="views/top/topCtrl.js"></script>
+	<script src="views/imagePut/imagePutCtrl.js"></script>
+	<script src="views/pngPut/pngPutCtrl.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145070270-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-145070270-1');
+	</script>
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({
+			google_ad_client: "ca-pub-2098916677172681",
+			enable_page_level_ads: true
+		});
+	</script>
+</head>
+
+<body>
+	<div class="navbar navbar-dark bg-dark footerFont">
+		<h1><a ui-sref="top">Time Table Maker タイムテーブルメーカー</a></h1>
+		<a href="https://twitter.com/suiani2014" target="_blank"><i class="fa fa-twitter"></i></a>
+	</div>
+	<div class="container">
+		<div ui-view id="anime_dlider"></div>
+	</div>
+</body>
+
+</html>
